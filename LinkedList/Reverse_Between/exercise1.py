@@ -7,20 +7,18 @@ class SolutionList(LinkedList):
 
         index: int = 0
         node: Node = self.head
-        prev: Node = None
+        temp: Node = None
 
         while node is not None:
             if index == start_index:
                 start_node: Node = node
-                break
-            prev = node
-            node = node.next
-            index += 1
+                prev: Node = temp
 
-        while node is not None:
             if index == end_index:
                 end_node: Node = node
                 break
+            
+            temp = node
             node = node.next
             index += 1
 
