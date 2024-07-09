@@ -25,7 +25,7 @@ class TestReverseBetween(unittest.TestCase):
         actual = linkedlist_to_list(ll.head)
         self.assertEqual(expected, actual)
 
-    def test_reverse_between_when_reverse_another_sublist_within_list(self):
+    def test_reverse_between_when_reverse_sublist_twice_within_list(self):
         ll = SolutionList(1)
         ll.append(2)
         ll.append(3)
