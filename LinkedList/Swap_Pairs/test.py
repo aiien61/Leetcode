@@ -1,11 +1,12 @@
 from __future__ import annotations
 import unittest
 from typing import List
+from base import Node, DoublyLinkedList
 from exercise1 import SolutionList
 
-def linkedlist_to_list(head) -> List[int]:
-    result = []
-    current = head
+def linkedlist_to_list(head: Node) -> List[int]:
+    result: List[int] = []
+    current: Node = head
     while current:
         result.append(current.value)
         current = current.next
@@ -14,18 +15,18 @@ def linkedlist_to_list(head) -> List[int]:
 class TestSwapPairs(unittest.TestCase):
 
     def test_swap_pairs_when_list_is_empty(self):
-        ll = SolutionList(None)
+        ll: DoublyLinkedList = SolutionList(None)
         ll.head = None
         ll.length = 0
 
         ll.swap_pairs()
 
-        expected: List[int] = []
-        actual: List[int] = linkedlist_to_list(ll.head)
+        expected: list = []
+        actual: list = linkedlist_to_list(ll.head)
         self.assertEqual(expected, actual)
 
     def test_swap_pairs_when_list_has_only_one_node(self):
-        ll = SolutionList(1)
+        ll: DoublyLinkedList = SolutionList(1)
 
         ll.swap_pairs()
 
@@ -34,7 +35,7 @@ class TestSwapPairs(unittest.TestCase):
         self.assertEqual(expected, actual)
 
     def test_swap_pairs_when_list_has_only_two_nodes(self):
-        ll = SolutionList(1)
+        ll: DoublyLinkedList = SolutionList(1)
         ll.append(2)
 
         ll.swap_pairs()
@@ -44,7 +45,7 @@ class TestSwapPairs(unittest.TestCase):
         self.assertEqual(expected, actual)
 
     def test_swap_pairs_when_list_odd_nodes(self):
-        ll = SolutionList(1)
+        ll: DoublyLinkedList = SolutionList(1)
         ll.append(2)
         ll.append(3)
         ll.append(4)
@@ -58,7 +59,7 @@ class TestSwapPairs(unittest.TestCase):
 
 
     def test_swap_pairs_when_list_even_nodes(self):
-        ll = SolutionList(1)
+        ll: DoublyLinkedList = SolutionList(1)
         ll.append(2)
         ll.append(3)
         ll.append(4)
