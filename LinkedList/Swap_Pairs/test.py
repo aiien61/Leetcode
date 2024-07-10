@@ -14,7 +14,7 @@ def linkedlist_to_list(head: Node) -> List[int]:
 
 class TestSwapPairs(unittest.TestCase):
 
-    def test_swap_pairs_when_list_is_empty(self):
+    def test_swap_pairs_when_list_is_empty(self) -> None:
         ll: DoublyLinkedList = SolutionList(None)
         ll.head = None
         ll.length = 0
@@ -25,7 +25,7 @@ class TestSwapPairs(unittest.TestCase):
         actual: list = linkedlist_to_list(ll.head)
         self.assertEqual(expected, actual)
 
-    def test_swap_pairs_when_list_has_only_one_node(self):
+    def test_swap_pairs_when_list_has_only_one_node(self) -> None:
         ll: DoublyLinkedList = SolutionList(1)
 
         ll.swap_pairs()
@@ -34,7 +34,7 @@ class TestSwapPairs(unittest.TestCase):
         actual: List[int] = linkedlist_to_list(ll.head)
         self.assertEqual(expected, actual)
 
-    def test_swap_pairs_when_list_has_only_two_nodes(self):
+    def test_swap_pairs_when_list_has_only_two_nodes(self) -> None:
         ll: DoublyLinkedList = SolutionList(1)
         ll.append(2)
 
@@ -44,7 +44,7 @@ class TestSwapPairs(unittest.TestCase):
         actual: List[int] = linkedlist_to_list(ll.head)
         self.assertEqual(expected, actual)
 
-    def test_swap_pairs_when_list_odd_nodes(self):
+    def test_swap_pairs_when_list_odd_nodes(self) -> None:
         ll: DoublyLinkedList = SolutionList(1)
         ll.append(2)
         ll.append(3)
@@ -58,7 +58,7 @@ class TestSwapPairs(unittest.TestCase):
         self.assertEqual(expected, actual)
 
 
-    def test_swap_pairs_when_list_even_nodes(self):
+    def test_swap_pairs_when_list_even_nodes(self) -> None:
         ll: DoublyLinkedList = SolutionList(1)
         ll.append(2)
         ll.append(3)

@@ -13,7 +13,7 @@ def linkedlist_to_list(head: Node) -> List[int]:
     return result
 
 class TestSwapFirstLast(unittest.TestCase):
-    def test_swap_first_last_when_multiple_nodes(self):
+    def test_swap_first_last_when_multiple_nodes(self) -> None:
         ll: DoublyLinkedList = SolutionList(1)
         ll.append(2)
         ll.append(3)
@@ -25,7 +25,7 @@ class TestSwapFirstLast(unittest.TestCase):
         actual: List[int] = linkedlist_to_list(ll.head)
         self.assertEqual(expected, actual)
 
-    def test_swap_first_last_when_single_node(self):
+    def test_swap_first_last_when_single_node(self) -> None:
         ll: DoublyLinkedList = SolutionList(1)
 
         ll.swap_first_last()
@@ -34,7 +34,7 @@ class TestSwapFirstLast(unittest.TestCase):
         actual: List[int] = linkedlist_to_list(ll.head)
         self.assertEqual(expected, actual)
 
-    def test_swap_first_last_when_list_is_empty(self):
+    def test_swap_first_last_when_list_is_empty(self) -> None:
         ll: DoublyLinkedList = SolutionList(None)
         ll.head = None
         ll.length = 0
@@ -45,7 +45,7 @@ class TestSwapFirstLast(unittest.TestCase):
         actual: list = linkedlist_to_list(ll.head)
         self.assertEqual(expected, actual)
 
-    def test_swap_first_last_when_two_node(self):
+    def test_swap_first_last_when_two_node(self) -> None:
         ll: DoublyLinkedList = SolutionList(1)
         ll.append(2)
 

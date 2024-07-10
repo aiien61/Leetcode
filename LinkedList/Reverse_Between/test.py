@@ -12,7 +12,7 @@ def linkedlist_to_list(head) -> List[int]:
 
 
 class TestReverseBetween(unittest.TestCase):
-    def test_reverse_between_when_reverse_sublist_within_list(self):
+    def test_reverse_between_when_reverse_sublist_within_list(self) -> None:
         ll = SolutionList(1)
         ll.append(2)
         ll.append(3)
@@ -25,7 +25,7 @@ class TestReverseBetween(unittest.TestCase):
         actual = linkedlist_to_list(ll.head)
         self.assertEqual(expected, actual)
 
-    def test_reverse_between_when_reverse_sublist_twice_within_list(self):
+    def test_reverse_between_when_reverse_sublist_twice_within_list(self) -> None:
         ll = SolutionList(1)
         ll.append(2)
         ll.append(3)
@@ -39,7 +39,7 @@ class TestReverseBetween(unittest.TestCase):
         actual = linkedlist_to_list(ll.head)
         self.assertEqual(expected, actual)
 
-    def test_reverse_between_when_reverse_sublist_of_length_1_within_list(self):
+    def test_reverse_between_when_reverse_sublist_of_length_1_within_list(self) -> None:
         ll = SolutionList(1)
         ll.append(2)
         ll.append(3)
@@ -52,7 +52,7 @@ class TestReverseBetween(unittest.TestCase):
         actual = linkedlist_to_list(ll.head)
         self.assertEqual(expected, actual)
 
-    def test_reverse_between_when_reverse_empty_list(self):
+    def test_reverse_between_when_reverse_empty_list(self) -> None:
         ll = SolutionList(0)
         ll.make_empty()
         ll.reverse_between(0, 0)
@@ -61,7 +61,7 @@ class TestReverseBetween(unittest.TestCase):
         actual = linkedlist_to_list(ll.head)
         self.assertEqual(expected, actual)
 
-    def test_reverse_between_when_reverse_entire_list(self):
+    def test_reverse_between_when_reverse_entire_list(self) -> None:
         ll = SolutionList(1)
         ll.append(2)
         ll.append(3)
