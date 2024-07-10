@@ -2,19 +2,19 @@ from base import Node, DoublyLinkedList
 
 
 class SolutionList(DoublyLinkedList):
-    def swap_pairs(self):
+    def swap_pairs(self) -> None:
         if self.head is None:
             return None
         if self.length == 1:
             return None
         
-        before = Node(None)
+        before: Node = Node(None)
         before.next = self.head
-        temp = self.head
+        temp: Node = self.head
 
         while temp is not None and temp.next is not None:
-            left = temp.next
-            right = temp.next.next
+            left: Node = temp.next
+            right: Node | None = temp.next.next
 
             # swap
             temp.prev = left
