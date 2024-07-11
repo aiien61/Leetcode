@@ -17,17 +17,17 @@ class Test(unittest.TestCase):
         actual: bool = is_balanced_parentheses('(()())')
         self.assertEqual(expected, actual)
 
-    def test_is_balanced_parentheses_when_imbalanced_extra_left_parenthese(self):
+    def test_is_balanced_parentheses_when_imbalanced_extra_left_parenthesis(self):
         expected: bool = False
         actual: bool = is_balanced_parentheses('(()')
         self.assertEqual(expected, actual)
 
-    def test_is_balanced_parentheses_when_imbalanced_extra_right_parenthese(self):
+    def test_is_balanced_parentheses_when_imbalanced_extra_right_parenthesis(self):
         expected: bool = False
         actual: bool = is_balanced_parentheses('())')
         self.assertEqual(expected, actual)
 
-    def test_is_balanced_parentheses_when_close_parenthese_followed_by_open_parenthese(self):
+    def test_is_balanced_parentheses_when_close_parenthesis_followed_by_open_parenthesis(self):
         expected: bool = False
         actual: bool = is_balanced_parentheses(')(')
         self.assertEqual(expected, actual)
